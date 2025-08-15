@@ -3,3 +3,16 @@
   flex-direction: column;
   align-items: center;
 }
+.movie-watch {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 780px) {
+  .movie-watch {
+    flex-direction: column;
+  }
+}

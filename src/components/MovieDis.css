@@ -1,0 +1,15 @@
+.moviedis-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: #fff;
+  gap: 30px;
+  background-color: #333230;
+}
+.moviedis-box img {
+  width: 140px;
+  height: 185px;
+}
+.movie-discription h3 {
+  font-size: 1.5rem;
+}
