@@ -1,12 +1,21 @@
 import "./Movies.css";
 
-import moviesList from "./moviesList";
 import Movie from "./Movie";
-export default function Movies() {
+// import moviesList from "./moviesList";
+// import MovieDis from "./MovieDis";
+export default function Movies({ movieData, setMovieId }) {
   return (
     <div className="movies-continer">
-      {moviesList.map((item, i) => (
-        <Movie key={i} img={item.img} name={item.name} year={item.year} />
+      {movieData.map((movie, i) => (
+        <Movie
+          key={i}
+          img={movie.Poster}
+          name={movie.Title}
+          year={movie.Year}
+          imgAlt={movie.Title}
+          movieId={movie.imdbID}
+          setMovieId={setMovieId}
+        />
       ))}
     </div>
   );

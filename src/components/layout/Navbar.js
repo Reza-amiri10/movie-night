@@ -1,6 +1,9 @@
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ result, onChange }) {
+  const handleChange = (e) => {
+    onChange(e.target.value);
+  };
   return (
     <nav>
       <div className="logo">
@@ -18,8 +21,9 @@ export default function Navbar() {
         className="search-box"
         type="search"
         placeholder="Search your movie ..."
+        onChange={handleChange}
       ></input>
-      <h3 className="result">10 Results found</h3>
+      <h3 className="result">{result} Results found</h3>
     </nav>
   );
 }

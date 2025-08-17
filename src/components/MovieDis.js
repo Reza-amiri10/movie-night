@@ -1,13 +1,15 @@
 import "./MovieDis.css";
-export default function MovieDis() {
+export default function MovieDis({ movieDetail }) {
   return (
     <div className="moviedis-box">
-      <img alt="god father" src="/images/god-father.jpeg"></img>
+      <img alt={movieDetail.Title} src={movieDetail.Poster}></img>
       <div className="movie-discription">
-        <h3>God Father</h3>
-        <p>29 Jone 1972 . 120 min</p>
-        <p>Action, Drama, Thriller</p>
-        <p>⭐️ 5.8 IMDb rating</p>
+        <h3>{movieDetail.Title}</h3>
+        <p>
+          {movieDetail.Released} . {movieDetail.Runtime}
+        </p>
+        <p>{movieDetail.Genre}</p>
+        <p>⭐️ {movieDetail.imdbRating} IMDb rating</p>
       </div>
     </div>
   );
